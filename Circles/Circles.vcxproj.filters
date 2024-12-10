@@ -19,11 +19,15 @@
     <ClCompile Include="Circle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Rectangle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Framework.h">
       <Filter>Framework</Filter>
     </ClInclude>
     <ClInclude Include="Circle.h" />
+    <ClInclude Include="Rectangle.h" />
   </ItemGroup>
 </Project>

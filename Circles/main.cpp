@@ -3,6 +3,7 @@
 
 #include <vector>
 #include "Circle.h"
+#include "Rectangle.h"
 
 using namespace std;
 // Screen dimensions
@@ -19,14 +20,20 @@ int main()
 	srand(time(NULL));
 
 	const int numCircles = 1;
-
-	// Creating a vector of our circles
+	
+	// Creating a vector of our circles and rectangles
 	vector<Circle> circles;
+	vector<Rectangle> rectangles;
 	
 	{
 
 		Circle newCircle(gScreenWidth, gScreenHeight, speed);
 		circles.push_back(newCircle);
+	}
+
+	{
+		Rectangle newRectangle(gScreenWidth, gScreenHeight);
+		rectangles.push_back(newRectangle);
 	}
 
 	std::cout << "Hello circles" << endl;
@@ -37,7 +44,6 @@ int main()
 		bool IsButtonPressed(EButton whichButton);
 		void GetMousePosition(int &x, int &y);
 			
-
 		// Iterates through the circles vector
 		for (auto &p : circles)
 		{
@@ -57,6 +63,11 @@ int main()
 
 				createCircle = false;
 			}
+		}
+
+		for (auto& p : rectangles)
+		{
+			p.Draw();
 		}
 	}
 	std::cout << "Bye bye" << endl;
